@@ -35,7 +35,7 @@ export default function LeftBar() {
   }
   
   return (
-    <div className='pl-4'>
+    <div className='px-4'>
       <a href='/' className='ml-2'>
         <img src='1a667685a3d219cfd780ee3f0592a067.png' height={63} width={123} />
       </a>
@@ -43,7 +43,7 @@ export default function LeftBar() {
         onClick={onClick}
         className='bg-primary-bg'
         defaultSelectedKeys={['1']}
-        mode="inline"
+        mode='inline'
         items={items}
       />
     </div>
