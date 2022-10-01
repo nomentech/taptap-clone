@@ -1,6 +1,7 @@
 import { Layout as AntLayout } from 'antd'
 import Left from './left'
 import Header from './header'
+import Right from './right'
 
 const AntHeader = AntLayout.Header
 const { Footer, Sider, Content } = AntLayout
@@ -8,7 +9,7 @@ const { Footer, Sider, Content } = AntLayout
 export default function Layout({ children }: any) {
   return (
     <AntLayout className='max-w-[1496px] my-0 mx-auto'>
-      <Sider>
+      <Sider className='bg-primary-bg'>
         <Left />
       </Sider>
       <AntLayout>
@@ -16,10 +17,10 @@ export default function Layout({ children }: any) {
           <Header />
         </AntHeader>
         <AntLayout>
-          <Content>{children}</Content>
-          <Sider>
-            <Content>Sider</Content>
-            <Footer>Footer</Footer>
+          <Content className='bg-primary-bg'>{children}</Content>
+          <Sider className='bg-primary-bg' width={340}>
+            <Right />
+            <Footer>Copyright</Footer>
           </Sider>
         </AntLayout>
       </AntLayout>

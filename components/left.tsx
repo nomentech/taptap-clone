@@ -35,7 +35,7 @@ export default function LeftBar() {
   }
   
   return (
-    <div className='bg-primary-bg pl-4'>
+    <div className='pl-4'>
       <a href='/' className='ml-2'>
         <img src='1a667685a3d219cfd780ee3f0592a067.png' height={63} width={123} />
       </a>
