@@ -19,14 +19,14 @@ const Home: NextPage = () => {
   ]
 
   return (
-    <div className='flex flex-col items-center mt-0 md:-mt-16'>
+    <div className='flex flex-col items-center mt-0 lg:-mt-16'>
       <div>
         <div className='flex items-center'>
           <Input placeholder='香肠游戏' bordered={false} prefix={<SearchOutlined />} size='large'
             style={{ backgroundColor: 'white' }}
             className='rounded-full my-2 mr-4' 
           />
-          <Avatar src='22f1196f825298281376608459bfa7fe.png' className='md:hidden' size='large' />
+          <Avatar src='22f1196f825298281376608459bfa7fe.png' className='lg:hidden' size='large' />
         </div>
         <Tabs defaultActiveKey='1' size='large' items={items} />
       </div>

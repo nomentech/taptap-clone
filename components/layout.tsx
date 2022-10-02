@@ -11,7 +11,7 @@ export default function Layout({ children }: any) {
         <Left />
       </Sider>
       <AntLayout>
-        <Header className='bg-primary-bg hidden md:flex justify-end items-center pr-4 '>
+        <Header className='bg-primary-bg hidden lg:flex justify-end items-center pr-4 '>
           <Avatar src='22f1196f825298281376608459bfa7fe.png' size='large' />
         </Header>
         <AntLayout>
