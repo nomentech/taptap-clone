@@ -1,17 +1,25 @@
 import type { NextPage } from 'next'
 import { Tabs } from 'antd'
+import VideoList from '../components/video_list'
 
 const Home: NextPage = () => {
+  const items = [
+    {
+      label: 'For You',
+      key: '1',
+      children: <VideoList />
+    },
+    {
+      label: 'Upcoming',
+      key: '2',
+      children: 'Upcoming Content'
+    }
+  ]
+
   return (
-    // <Tabs defaultActiveKey='1'>
-    //   <Tabs.TabPane tab='For You' key='1'>
-    //     Content of Tab Pane 1
-    //   </Tabs.TabPane>
-    //   <Tabs.TabPane tab='Upcoming' key='2'>
-    //     Content of Tab Pane 2
-    //   </Tabs.TabPane>
-    // </Tabs>
-    <></>
+    <div className='flex justify-center'>
+      <Tabs defaultActiveKey='1' size='large' items={items} style={{ width: '600px' }}/>
+    </div>
   )
 }
 

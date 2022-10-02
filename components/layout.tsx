@@ -20,7 +20,7 @@ export default function Layout({ children }: any) {
           <Content className='bg-primary-bg'>{children}</Content>
           <Sider className='bg-primary-bg' width={340}>
             <Right />
-            <Footer>Copyright</Footer>
+            <Footer className='bg-primary-bg'>Copyright</Footer>
           </Sider>
         </AntLayout>
       </AntLayout>

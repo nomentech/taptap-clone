@@ -14,11 +14,11 @@ body {
 }
 
 .ant-menu-inline {
-  border-right: 0 !important;
+  border-right: none !important;
 }
 
 .ant-menu-inline .ant-menu-item::after {
-  border-right: 0 !important;
+  border-right: none !important;
 }
 
 .ant-menu-item-selected {
@@ -29,4 +29,8 @@ body {
 .ant-menu-light .ant-menu-item:hover {
   background-color: #fff !important;
   border-radius: 9999px;
+}
+
+.ant-tabs-top .ant-tabs-nav::before {
+  border-bottom: none !important;
 }
