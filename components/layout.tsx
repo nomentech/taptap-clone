@@ -13,7 +13,7 @@ export default function Layout({ children }: any) {
         <Left />
       </Sider>
       <AntLayout>
-        <AntHeader className='bg-primary-bg flex justify-between items-center pl-0'>
+        <AntHeader className='bg-primary-bg flex justify-end items-center pr-4'>
           <Header />
         </AntHeader>
         <AntLayout>
