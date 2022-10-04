@@ -24,7 +24,6 @@ export default function Right() {
   return (
     <Card title='Popular Games' bordered={false} className='mr-4 rounded-xl'>
       <List
-        itemLayout='horizontal'
         dataSource={data}
         split={false}
         renderItem={item => (

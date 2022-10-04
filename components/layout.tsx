@@ -1,4 +1,5 @@
 import { Avatar, Layout as AntLayout } from 'antd'
+import Bottom from './bottom'
 import Left from './left'
 import Right from './right'
 
@@ -21,6 +22,9 @@ export default function Layout({ children }: any) {
             <Footer className='bg-primary-bg'>Copyright</Footer>
           </Sider>
         </AntLayout>
+        <Footer className='fixed bottom-0 left-0 p-0 min-w-full sm:hidden'>
+          <Bottom />
+        </Footer>
       </AntLayout>
     </AntLayout>
   )

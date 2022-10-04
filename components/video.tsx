@@ -2,11 +2,16 @@ import { Card, Tag } from 'antd'
 
 const { Meta } = Card
 
-export default function VideoList() {
+export default function Video() {
   return (
     <Card 
       bordered={false} 
-      cover={<video src='https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4' controls />}
+      cover={
+        <video src='https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4' 
+                poster='https://d2zihajmogu5jn.cloudfront.net/elephantsdream/poster.png'
+                playsInline controls 
+        />
+      }
       style={{ borderRadius: '10px', overflow: 'hidden' }}
     >
       <Meta 
