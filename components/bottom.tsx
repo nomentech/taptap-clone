@@ -1,14 +1,15 @@
+import Link from 'next/link'
 import { icon_home_pressed, icon_ranking, icon_discover, icon_moments } from './icons'
 
 export default function Bottom() {
   const MenuItem = ({ name, icon, active=false }: any) => (
-    <a href='/' 
-      className={`${active ? 'text-primary-color' : 'text-[#868c92]' } 
-                  h-full flex flex-col justify-center items-center bg-white text-xs`
-    }>
-      {icon}
-      {name}
-    </a>
+    <Link href='/' >
+      <a className={`${active ? 'text-primary-color' : 'text-[#868c92]' } 
+          h-full flex flex-col justify-center items-center bg-white text-xs`}>
+        {icon}
+        {name}
+      </a>
+    </Link>
   )
 
   return (

@@ -6,16 +6,16 @@ export default function Content() {
   const [height, setHeight] = useState(0)
   
   const data = [
-    <Video />,
-    <Video />,
-    <Video />
+    <Video key='1' />,
+    <Video key='2' />,
+    <Video key='3' />
   ]
 
   useEffect(() => {
     // bottom=50, searchbar=52.14 Tabbar=57.14
     const h = window.innerHeight - 50 - 52.14 - 57.14
     setHeight(h)
-  })
+  }, [])
 
   return (
     <List

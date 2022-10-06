@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Card, Image, List, Tag } from 'antd'
 import { StarFilled } from '@ant-design/icons'
 
@@ -29,8 +30,8 @@ export default function Right() {
         renderItem={item => (
           <List.Item>
             <List.Item.Meta
-              avatar={<Image src={item.src} width={56} height={56} />}
-              title={<a href='#'>{item.title}</a>}
+              avatar={<Image src={item.src} width={56} height={56} alt='' preview={false} />}
+              title={<Link href='#'><a>{item.title}</a></Link>}
               description={
                 <>
                   <Tag color='#f5f7f8' className='text-[#868c92]'>Shooter</Tag>
