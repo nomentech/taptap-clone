@@ -1,10 +1,11 @@
-import type { NextPage } from 'next'
+import type { ReactElement } from 'react'
 import { Avatar, Input, Tabs } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
-
+import type { NextPageWithLayout } from './_app'
+import Layout from '../components/layout'
 import Content from '../components/content'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   const items = [
     {
       label: 'For You',
@@ -31,6 +32,14 @@ const Home: NextPage = () => {
         <Tabs defaultActiveKey='1' size='large' items={items} />
       </div>
     </div>
+  )
+}
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
 
