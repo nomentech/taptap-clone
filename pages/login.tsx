@@ -24,9 +24,9 @@ const Login: NextPage = () => {
         </Link>
       </div>
       <div className='sm:mt-12'>
-        <Checkbox className='text-custom-grey text-sm'>By checking the box, you agree to TapTap's 
-          <Link href=''><a className='text-primary-color'> Terms of Service </a></Link>&
-          <Link href=''><a className='text-primary-color'> Privacy Policy </a></Link>
+        <Checkbox className='text-custom-grey text-sm'>By checking the box, you agree to TapTap&#39;s 
+          <Link href='#'><a className='text-primary-color'> Terms of Service </a></Link>&
+          <Link href='#'><a className='text-primary-color'> Privacy Policy </a></Link>
         </Checkbox>
         <div className='bg-primary-color my-6 rounded-full'>
           <Button type='primary' shape='round' block className='h-12'>Continue</Button>
