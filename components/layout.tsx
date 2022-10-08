@@ -1,4 +1,5 @@
 import { Avatar, Layout as AntLayout } from 'antd'
+import Link from 'next/link'
 import Bottom from './bottom'
 import Left from './left'
 import Right from './right'
@@ -13,7 +14,9 @@ export default function Layout({ children }: any) {
       </Sider>
       <AntLayout>
         <Header className='bg-primary-bg hidden lg:flex justify-end items-center pr-4 '>
-          <Avatar src='22f1196f825298281376608459bfa7fe.png' size='large' />
+          <Link href='/login'>
+            <Avatar src='22f1196f825298281376608459bfa7fe.png' size='large' className='cursor-pointer' />
+          </Link>
         </Header>
         <AntLayout>
           <Content className='bg-primary-bg'>{children}</Content>

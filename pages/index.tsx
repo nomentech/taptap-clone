@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Avatar, Input, Tabs } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 import type { NextPageWithLayout } from './_app'
@@ -27,7 +28,9 @@ const Home: NextPageWithLayout = () => {
             style={{ backgroundColor: 'white' }}
             className='rounded-full my-2 mr-2' 
           />
-          <Avatar src='22f1196f825298281376608459bfa7fe.png' className='flex-shrink-0 lg:hidden' size='large' />
+          <Link href='/login'>
+            <Avatar src='22f1196f825298281376608459bfa7fe.png' className='cursor-pointer flex-shrink-0 lg:hidden' size='large' />
+          </Link>
         </div>
         <Tabs defaultActiveKey='1' size='large' items={items} />
       </div>
