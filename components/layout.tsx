@@ -1,5 +1,6 @@
-import { Avatar, Layout as AntLayout } from 'antd'
+import { Layout as AntLayout } from 'antd'
 import Link from 'next/link'
+import Avatar from './avatar'
 import Bottom from './bottom'
 import Left from './left'
 import Right from './right'
@@ -15,7 +16,9 @@ export default function Layout({ children }: any) {
       <AntLayout>
         <Header className='bg-primary-bg hidden lg:flex justify-end items-center pr-4 '>
           <Link href='/login'>
-            <Avatar src='22f1196f825298281376608459bfa7fe.png' size='large' className='cursor-pointer' />
+            <div className='cursor-pointer'>
+              <Avatar />
+            </div>
           </Link>
         </Header>
         <AntLayout>
