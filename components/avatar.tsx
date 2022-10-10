@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Avatar as AntAvatar, Dropdown, Menu } from 'antd'
 
-export default function Avatar() {
+export default function Avatar({ size='default' }: any) {
   const menu = (
     <Menu
       items={[
@@ -52,7 +52,7 @@ export default function Avatar() {
   return (
     <Dropdown overlay={menu} trigger={['click']}
       overlayStyle={{ width: '288px', fontSize: '16px' }}>
-      <AntAvatar src='22f1196f825298281376608459bfa7fe.png' size='large' />
+      <AntAvatar src='22f1196f825298281376608459bfa7fe.png' size={size} className='cursor-pointer' />
     </Dropdown>
   )
 }

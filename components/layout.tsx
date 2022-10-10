@@ -16,8 +16,8 @@ export default function Layout({ children }: any) {
       <AntLayout>
         <Header className='bg-primary-bg hidden lg:flex justify-end items-center pr-4 '>
           <Link href='/login'>
-            <div className='cursor-pointer'>
-              <Avatar />
+            <div>
+              <Avatar size='large' />
             </div>
           </Link>
         </Header>
