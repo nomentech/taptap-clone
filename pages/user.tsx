@@ -4,6 +4,7 @@ import { ArrowLeftOutlined, ShareAltOutlined, SearchOutlined } from '@ant-design
 import type { NextPageWithLayout } from './_app'
 import Layout from '../components/layout'
 import Avatar from '../components/avatar'
+import Searchbar from '../components/searchbar'
 
 const User: NextPageWithLayout = () => {
   const subitems = [
@@ -31,11 +32,6 @@ const User: NextPageWithLayout = () => {
       label: 'Articles',
       key: '5',
       children: <Empty description='No content yet' />
-    },
-    {
-      label: 'Replies',
-      key: '6',
-      children: <Empty description='No content yet' />
     }
   ]
 
@@ -58,36 +54,43 @@ const User: NextPageWithLayout = () => {
   )
 
   return (
-    <div>
-      <div className='fixed top-0 left-0 w-full z-10'>
+    <div className='flex flex-col items-center lg:-mt-16 lg:mx-4'>
+      <div className='max-w-[600px]'>
+        <div className='hidden lg:block'>
+          <Searchbar />
+        </div>
         <div className='flex justify-between p-3'>
           <Icon icon={<ArrowLeftOutlined />} />
           <div className='flex'>
             <Icon icon={<ShareAltOutlined />} />
-            <Icon icon={<SearchOutlined />} />
-            <Avatar />
+            <div className='lg:hidden'>
+              <Icon icon={<SearchOutlined />} />
+              <Avatar />
+            </div>
           </div>
         </div>
-      </div>
-      <Image src='default_bg.05387bbb.png' preview={false} alt='' />
-      <div className='bg-primary-color mt-1 mr-6 rounded-full float-right'>
-        <Button type='primary' shape='round'>Edit Profile</Button>
-      </div>
-      <div className='ml-6 -mt-16'>
-        <Image src='8d7b8d6bfdbafca5212ba9ab29320611.jpg' height={100} width={100} alt='' preview={false}
-          className='rounded-full' />
-        <div className='font-semibold text-lg'>Nickname</div>
-        <div className='text-[#868c92] text-xs'>IP Location: China</div>
-        <Button type='primary' className='text-primary-color mt-4 text-xs p-1 rounded-md' size='small'>ID: 509119169</Button>
-        <div className='my-2'>
-          <span className='text-primary-color mr-2'>0</span>
-          <span className='text-[#868c92] mr-2'>Followers</span>
-          <span className='text-primary-color mr-2'>0</span>
-          <span className='text-[#868c92] mr-2'>Floowing</span>
-          <span className='text-primary-color mr-2'>0</span>
-          <span className='text-[#868c92] mr-2'>Favorites</span>
+        <div className='-mt-[54px]'>
+          <Image src='default_bg.05387bbb.png' preview={false} alt='' />
         </div>
-        <Tabs defaultActiveKey='1' size='large' items={items} />
+        <div className='bg-primary-color mt-1 mr-6 rounded-full float-right'>
+          <Button type='primary' shape='round'>Edit Profile</Button>
+        </div>
+        <div className='ml-6 -mt-16'>
+          <Image src='8d7b8d6bfdbafca5212ba9ab29320611.jpg' height={100} width={100} alt='' preview={false}
+            className='rounded-full' />
+          <div className='font-semibold text-lg'>Nickname</div>
+          <div className='text-[#868c92] text-xs'>IP Location: China</div>
+          <Button type='primary' className='text-primary-color mt-4 text-xs p-1 rounded-md' size='small'>ID: 509119169</Button>
+          <div className='my-2'>
+            <span className='text-primary-color mr-1'>0</span>
+            <span className='text-[#868c92] mr-1'>Followers |</span>
+            <span className='text-primary-color mr-1'>0</span>
+            <span className='text-[#868c92] mr-1'>Following |</span>
+            <span className='text-primary-color mr-1'>0</span>
+            <span className='text-[#868c92] mr-1'>Favorites</span>
+          </div>
+          <Tabs defaultActiveKey='1' size='large' items={items} />
+        </div>
       </div>
     </div>
   )

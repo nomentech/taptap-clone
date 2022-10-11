@@ -30,6 +30,10 @@ body {
   padding: 8px !important;
 }
 
+.ant-image {
+  position: static !important;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
